@@ -3,6 +3,7 @@ version: '3.5'
 services:
 
   php-apache:
+    container_name: sample-shop_php_apache_1
     image: senseshare/php-apache
     ports:
       - 8080:80
@@ -11,6 +12,7 @@ services:
     restart: always
 
   mysql:
+    container_name: sample-shop_mysql_1
     image: senseshare/mysql
     volumes:
       - ./mysql:/var/lib/mysql
@@ -19,6 +21,7 @@ services:
     restart: always
 
   phpmyadmin:
+    container_name: sample-shop_phpmyadmin_1
     image: phpmyadmin/phpmyadmin
     ports:
       - 4040:80
